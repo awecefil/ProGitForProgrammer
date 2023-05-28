@@ -6,7 +6,7 @@
 
 # git statul - 查看狀態
 
-# git add 資料夾路徑 - 請 Git 追蹤此資料夾，此後檔案的狀態將存入 staging area 整備區
+# git add 資料夾路徑 or git add . - 請 Git 追蹤此資料夾，此後檔案的狀態將存入 staging area 整備區
 
 # [Note] 一定要 add + commit 兩步驟才是正式紀錄到儲存庫，add 只是暫存
 # git commit - 送出 commit 即是將當前資料夾內容創造出一個checkpoint，也等於一個版本
@@ -17,3 +17,5 @@
 # add this message from second local repository
 
 # git log - 查看 commit 紀錄
+
+#####
