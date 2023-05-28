@@ -26,3 +26,4 @@
 
 # git barnch 分支名稱 - 建立分支
 # git checkout 分支名稱 - 切換到分支的名稱(checkout "to")
+# git checkout -b 分支名稱 - 建立 + 切換
