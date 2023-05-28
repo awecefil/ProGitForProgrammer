@@ -11,6 +11,7 @@
 # [Note] 一定要 add + commit 兩步驟才是正式紀錄到儲存庫，add 只是暫存
 # git commit - 送出 commit 即是將當前資料夾內容創造出一個checkpoint，也等於一個版本
     # -m "此 commit 的說明訊息"
+    # -a 跳過整備區階段，直接送出 commit，需在 -m 之前
 
 # git push - 將本機儲存庫的改變同步到雲端儲存庫
 
