@@ -18,6 +18,7 @@
 # add this message from second local repository
 
 # git log - 查看 commit 紀錄
+    # --oneline - 單行顯示
 
 ##### CHAPTER 3 - Branch #####
 
@@ -27,3 +28,4 @@
 # git barnch 分支名稱 - 建立分支
 # git checkout 分支名稱 - 切換到分支的名稱(checkout "to")
 # git checkout -b 分支名稱 - 建立 + 切換
+# git push --set-upstream origin 分支名稱 - 當新建立的分支還沒被雲端儲存庫認識前使用，僅第一次需要，用過後就跟一般 push 一樣
