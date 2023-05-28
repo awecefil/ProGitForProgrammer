@@ -19,4 +19,10 @@
 
 # git log - 查看 commit 紀錄
 
-#####
+##### CHAPTER 3 - Branch #####
+
+# Branch (分支) - 當要處理 bug 或開發新功能時，建立一個新分支(aka feature branch)，此分支是當前最新版本的副本
+# Key Concept - branch 上的更動先 merge 回 main，再由主分支 main 去 push，易於管控也確保主分支是乾淨的，
+
+# git barnch 分支名稱 - 建立分支
+# git checkout 分支名稱 - 切換到分支的名稱(checkout "to")
