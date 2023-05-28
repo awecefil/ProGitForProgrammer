@@ -29,3 +29,4 @@
 # git checkout 分支名稱 - 切換到分支的名稱(checkout "to")
 # git checkout -b 分支名稱 - 建立 + 切換
 # git push --set-upstream origin 分支名稱 - 當新建立的分支還沒被雲端儲存庫認識前使用，僅第一次需要，用過後就跟一般 push 一樣
+# git merge 分支名稱 - 將分支 merge 回來(ex: 在分支 B 修改後，想將 B merge 回 A，則先 git checkout A + git merge B)
