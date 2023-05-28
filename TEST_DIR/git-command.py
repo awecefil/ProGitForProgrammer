@@ -15,3 +15,5 @@
 # git push - 將本機儲存庫的改變同步到雲端儲存庫
 
 # add this message from second local repository
+
+# git log - 查看 commit 紀錄
