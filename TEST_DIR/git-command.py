@@ -43,3 +43,5 @@
 
 
 # test --amend command
+
+# git cherry-pick 需要的 commit ID - 不全部 commit 而是選擇特定要 commit 的版本
