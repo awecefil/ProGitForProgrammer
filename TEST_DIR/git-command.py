@@ -33,3 +33,13 @@
 # git merge 分支名稱 - 將分支 merge 回來(ex: 在分支 B 修改後，想將 B merge 回 A，則先 git checkout A + git merge B)
 
 # add to test KDiff3 from branch Calculator
+
+##### CHAPTER 5 - rebase, amend, and cherry-pick #####
+
+# git rebase 主分支 - 通常是由於功能分支在基於 main 分出來時，main 這邊被更新了導致有新版本的 main，當功能分支要 merge 回 main 時，
+#                     git 會自動建立一個新的 commit 分別指向最新的 main 和最新的功能分支，因此太多次這種情況會導致很多不重要的 commit 資訊
+#                     此時就能用 rebase 功能，讓功能分支的"最舊版本"接上 main 的最新版本
+# git reset ORIG_HEAD -hard - 復原到 rebase 前的狀態
+
+
+# test --amend command
