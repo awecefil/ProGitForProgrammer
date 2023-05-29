@@ -12,6 +12,7 @@
 # git commit - 送出 commit 即是將當前資料夾內容創造出一個checkpoint，也等於一個版本
     # -m "此 commit 的說明訊息"
     # -a 跳過整備區階段，直接送出 commit，需在 -m 之前
+    # --amend 在未 push 前，修改上一次 commit 的訊息
 
 # git push - 將本機儲存庫的改變同步到雲端儲存庫
 
