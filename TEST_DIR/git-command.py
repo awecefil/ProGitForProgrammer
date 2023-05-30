@@ -45,3 +45,9 @@
 # test --amend command
 
 # git cherry-pick 需要的 commit ID - 不全部 commit 而是選擇特定要 commit 的版本
+
+##### CHAPTER 6 - 用 Interactive rebase 修改 commit 歷史紀錄 #####
+
+# git rebase -i - 啟動 Interactive rebase
+# git rebase -i HEAD~7 顯示最新的 7 個 commit
+# 進入 Interactive rebase 後，將 pick 改為 s 代表將其壓縮至前一個 commit
