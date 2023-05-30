@@ -68,3 +68,11 @@
 # git tag 標籤名稱 commitID -m "註解訊息" - 帶註解標籤：要用 git show 標籤名稱，才看得出差別
 # git tag -f 標籤名稱 new_commitID - 如果標籤給錯，重新下給新的 commitID
 # git tag -d 標籤名稱 - 刪除標籤
+
+##### CHAPTER 8 - 建立指令的別名(alias) #####
+# git config --global alias.別名 原指令名 - ex: git config --global alias.st status → git st 等於 git status
+#                                          ex: git config --global alias.bc checkout -b → git checkout -b 等於 git checkout bc
+#                                          ex: git config --global alias.cam "commit -a -m" → 如果指令有多個參數要用 "" 包起來
+# ex:  git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(yellow)<%an>%Creset' --abbrev-commit"
+# 注意：同一個指令可以建立"多"個別名
+# 建立過的別名可以用 git config --edit --global 中的 [alias] 去看
