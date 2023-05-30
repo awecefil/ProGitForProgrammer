@@ -34,6 +34,10 @@
 
 # add to test KDiff3 from branch Calculator
 
+##### CHAPTER 4 - 檢視 commits 內容並 merge 分支 #####
+# git show - 顯示 1.作者 2.日期 3.commit msg 4.和前一個 commit 版本的差異(a:前一個, b:當前新曾)
+
+
 ##### CHAPTER 5 - rebase, amend, and cherry-pick #####
 
 # git rebase 主分支 - 通常是由於功能分支在基於 main 分出來時，main 這邊被更新了導致有新版本的 main，當功能分支要 merge 回 main 時，
@@ -51,3 +55,16 @@
 # git rebase -i - 啟動 Interactive rebase
 # git rebase -i HEAD~7 顯示最新的 7 個 commit
 # 進入 Interactive rebase 後，將 pick 改為 s 代表將其壓縮至前一個 commit
+
+##### CHAPTER 7 - 製作儲存庫副本 (mirror)、notes 與 tag 等實用指令 #####
+
+# git push --mirror "url of repos2" - 建立一個完全一樣(連檔案建立時間都一樣)的副本到另一個 repository
+#                                     commitID、commit、HEAD、origin 都和原本的一樣，之後可以任意更改不會影響到另一個
+
+# git note add -m "attached message" commitID - 為指定的 commit 附加新的訊息，常用在 1.新增資訊 2.單純標記(maybe for 後續 rebase) 
+#                                               3.描述 commit 之間的關係，之後用 log 去看會多出 Notes 訊息
+#                                                   
+# git tag 標籤名稱 commitID - 簡單標籤：為一個 commit 建立標籤，非常顯眼，可用來標記重要版本，這樣就能看到版本跟版本間做了哪些 commit
+# git tag 標籤名稱 commitID -m "註解訊息" - 帶註解標籤：要用 git show 標籤名稱，才看得出差別
+# git tag -f 標籤名稱 new_commitID - 如果標籤給錯，重新下給新的 commitID
+# git tag -d 標籤名稱 - 刪除標籤
