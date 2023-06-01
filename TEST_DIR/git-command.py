@@ -97,3 +97,18 @@
 #           clear 'stash@{ID}' - 刪除全部 stash
 
 # git clean - 清除未追蹤的檔案，直接刪除未追蹤的部分，一開始會顯示失敗，必須要加上 -f 表示你是認真的= =
+
+##### CHAPTER 11 - 用 git bisect 和 blame 揪出有問題的 commit #####
+# git bisect 執行步驟：
+# 1. git bisect start - 啟動 bisect，用二分法逐漸找到出問題是哪一個 commit 
+# 2. git bisect bad <commitID> - 先給定是哪一個 commit 有 bug，沒給就預設是最新的那個 commit
+# 3. git checkout <commitID> - 先去到認為是沒有 bug 的那次 commit
+# 4. git bisect good - 跟 git 說這個 commit 是好的，這樣之後就從這個當作開頭往後面的 commit 去做 bisect
+# 5. git 開始用 bisect 自動跳到要來檢查的 commit，並顯示該 commit 建立的內容
+# 6-1. 如果沒有問題就輸入 git bisect good，接下來 git 又會自動跳到下一個要檢查的 commit
+# 6-2. 如果有發現 bug 就輸入 git bisect bad
+# 7. 依序執行 5&6 直到找到 step=0
+# 8. 當 step=0 時即找到第一次出現 bug 的 commit
+# 9. git bisect reset 退出搜尋模式
+
+# 也可以一開始直接 git bisect start <壞的commitID> <好的commitID>
