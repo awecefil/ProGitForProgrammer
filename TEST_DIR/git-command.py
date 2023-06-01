@@ -68,6 +68,8 @@
 
 # git push --mirror <url of repos2> - 建立一個完全一樣(連檔案建立時間都一樣)的副本到另一個 repository
 #                                     commitID、commit、HEAD、origin 都和原本的一樣，之後可以任意更改不會影響到另一個
+# mirror 本地端資料到雲端 repos 後，記得要在本地端 clone 回來，不然本地端就沒有紀錄
+
 
 # git note add -m "attached message" commitID - 為指定的 commit 附加新的訊息，常用在 1.新增資訊 2.單純標記(maybe for 後續 rebase) 
 #                                               3.描述 commit 之間的關係，之後用 log 去看會多出 Notes 訊息
@@ -85,4 +87,13 @@
 # 注意：同一個指令可以建立"多"個別名
 # 建立過的別名可以用 git config --edit --global 中的 [alias] 去看
 
-##### CHAPTER 9 - 建立指令的別名(alias) #####
+##### CHAPTER 10 - 用 stash 指令把工作存入暫存區 #####
+# git stash - 將目前的修改狀態加入 stash 暫存區中，適合用在開發到一半臨時要換寫其他專案的狀況(因為 commit 一個不完善的東西不太好)
+#           list - 查看目前 stash 裡面的內容，每 stash 一次，就會多一個 stash 狀態，最新的標示 ID 為 0，舊的遞增
+#           show -p 'stash@{ID}' - 查看該 stash 修改的內容
+#           pop 'stash@{ID}' - 回復該 stash 的修改，刪除該 stash
+#           apply 'stash@{ID}' - 回復該 stash 的修改，'不'刪除該 stash
+#           drop 'stash@{ID}' - 直接刪除該 stash
+#           clear 'stash@{ID}' - 刪除全部 stash
+
+# git clean - 清除未追蹤的檔案，直接刪除未追蹤的部分，一開始會顯示失敗，必須要加上 -f 表示你是認真的= =
