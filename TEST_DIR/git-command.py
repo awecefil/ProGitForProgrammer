@@ -20,6 +20,14 @@
 
 # git log - 查看 commit 紀錄
     # --oneline - 單行顯示
+    # --name-only - 顯示變更的是哪些檔案
+    # -p - 顯示變更了哪些檔案+內容
+    # <FileName> - 顯示該檔案的每個變更歷程
+    # -S<字串> - 列出所有 commits 中包含<字串>的 commit
+    # --committer="<username>" - 找出<username>所送出的所有 commits (case-sensitive)
+    # --since=<"時間"> - 列出<時間>前的 commits，<時間>很彈性，ex: "one week", "2 weeks", "five days", "80 minutes"
+
+# git diff - 顯示當前檔案內容和上一次 commit 的差異
 
 ##### CHAPTER 3 - Branch #####
 
@@ -58,7 +66,7 @@
 
 ##### CHAPTER 7 - 製作儲存庫副本 (mirror)、notes 與 tag 等實用指令 #####
 
-# git push --mirror "url of repos2" - 建立一個完全一樣(連檔案建立時間都一樣)的副本到另一個 repository
+# git push --mirror <url of repos2> - 建立一個完全一樣(連檔案建立時間都一樣)的副本到另一個 repository
 #                                     commitID、commit、HEAD、origin 都和原本的一樣，之後可以任意更改不會影響到另一個
 
 # git note add -m "attached message" commitID - 為指定的 commit 附加新的訊息，常用在 1.新增資訊 2.單純標記(maybe for 後續 rebase) 
@@ -76,3 +84,5 @@
 # ex:  git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(yellow)<%an>%Creset' --abbrev-commit"
 # 注意：同一個指令可以建立"多"個別名
 # 建立過的別名可以用 git config --edit --global 中的 [alias] 去看
+
+##### CHAPTER 9 - 建立指令的別名(alias) #####
